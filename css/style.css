@@ -91,6 +91,12 @@ img{
     max-width: 100%;
 }
 
+ul{
+    list-style: none;
+    text-align: left;
+    margin: 0;
+}
+
 /** Header **/
 
 .navegacion{
@@ -136,6 +142,14 @@ img{
         height: 6.5rem;
         flex-direction: row;
     }
+
+    .navegacion__logo a h3{
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media(min-width: 1024px){
 
     .navegacion__logo a h3{
         visibility: visible;
