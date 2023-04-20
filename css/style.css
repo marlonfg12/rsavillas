@@ -464,13 +464,31 @@ img{
 /* Misión y visión mv */
 
 .mv{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
     text-align: left;
+    display: grid;
+    gap: 2rem;
 }
 
 .mv h4{
+    background-color: var(--primary);
+    padding: 2rem;
+    color: var(--blanco);
+    border-radius: 10px 10px 0 0;
+}
+
+.mv .mv__div{
+    border: 1px solid var(--primary-hover);
+    border-radius: 10px;
+}
+
+.mv p{
+    padding: 1rem;
+}
+
+@media(min-width: 768px){
+    .mv{
+        grid-template-columns: repeat(2, 1fr);
+    }
     
 }
 
