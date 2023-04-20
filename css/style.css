@@ -26,11 +26,16 @@ body{
     font-family: var(--font-family1);
     font-size: 1.6rem;
     line-height: 2;
+    background-color: var(--blanco);
 }
 
 /** Utilidades **/
 
+.no-margin{
+    margin: 0;
+}
 
+.text-left{text-align: left;}
 
 /** Globales **/
 
@@ -51,8 +56,8 @@ body{
 }
 
 .contenedor{
-    width: min(90%, 120rem);
-    margin: 0 auto;
+    width: min(90%, 120rem) !important;
+    margin: 0 auto !important;
 }
 
 a{
@@ -173,6 +178,7 @@ img{
 
 /** HERO **/
 
+
 .hero{
     background-image: url(../img/Banner2.jpg);
     background-repeat: no-repeat;
@@ -180,6 +186,7 @@ img{
     background-position: center center;
     height: 60rem;
 }
+
 
 .contenido-hero{
     position: relative;
@@ -200,6 +207,22 @@ img{
     padding: 2rem;
     text-align: center;
 }
+
+.hero-min{
+    height: 12.5rem;
+}
+
+.hero-min h3{
+    color: var(--gris);
+    font-weight: bold;
+    font-size: 4.2rem;
+}
+
+.hero-min .info-hero{
+    background-color: transparent;
+    padding: 1rem;
+}
+
 
 /* Main */
 .main{
@@ -324,6 +347,9 @@ img{
     
 }
 
+.preview{
+    background-color: var(--blanco);
+}
 
 .preview iframe{
     height: 100%;
@@ -415,6 +441,37 @@ img{
 
 .footer__copyright a{
     color: var(--blanco);
+}
+
+
+
+/**** Nosotros.html ****/
+
+/* BIC */
+
+.BIC {
+    display: grid;
+    align-items: center;
+}
+
+@media(min-width: 768px){
+    .BIC{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Misión y visión mv */
+
+.mv{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: left;
+}
+
+.mv h4{
+    
 }
 
 
