@@ -252,7 +252,6 @@ span{
     border-radius: 10px;
     background-color: rgb(255 255 255 / 70%);
     padding: 2rem;
-    text-align: center;
 }
 
 .hero-min{
@@ -799,16 +798,25 @@ border-radius: 0 0 10px 10px; */
 }
 
 .hero.form-lr{
-    height: 80rem;
+    height: 120rem;
 }
-
 
 .form-register-l .info-hero.no-bg {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     max-width: 100%;
+}
+
+@media(min-width: 1024px){
+    .form-register-l .info-hero.no-bg {
+        flex-direction: row;
+    }
+
+    .hero.form-lr{
+        height: 80rem;
+    }
 }
 
 
