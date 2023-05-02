@@ -56,7 +56,12 @@
         <div class="contenido-hero form-register-l">
             <div class="info-hero no-bg">
 
-                <form class="formulario">
+                <div class="botons">
+                    <button onclick="mostrarLogin()" class="btn btn-login active btn-primary">Login</button>
+                    <button onclick="mostrarRegistrar()" class="btn btn-registrar btn-primary">Register</button>
+                </div>
+
+                <form class="formulario login" id="login">
                     <div class="formulario__header">
                         <h3 class="no-margin">Formulario de Inicio de Sesion</h3>
                     </div>
@@ -86,7 +91,7 @@
                 </form>
 
 
-                <form class="formulario">
+                <form class="formulario register" id="registrar">
                     <div class="formulario__header">
                         <h3 class="no-margin">Formulario de Registro</h3>
                         <p class="no-margin">Diligencie todos los datos requeridos <span>*</span></p>

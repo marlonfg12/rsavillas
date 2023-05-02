@@ -800,28 +800,48 @@ border-radius: 0 0 10px 10px; */
     
 }
 
+/** Forms register y login **/
 .hero.form-lr{
-    height: 128rem;
+    height: 100rem;
 }
+
+@media(min-width: 768px){
+    .hero.form-lr{
+        height: 65rem;
+    }
+}
+
 
 .form-register-l .info-hero.no-bg {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 180rem;
 }
 
-@media(min-width: 1024px){
-    .form-register-l .info-hero.no-bg {
-        flex-direction: row;
-    }
+.form-register-l .botons{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 1.5rem;
+    gap: .5rem;
+}
 
-    .hero.form-lr{
-        height: 80rem;
-    }
+.form-register-l .botons .btn{
+    border:0;
+    outline: none;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.btn.active{
+    background-color: var(--primary-hover);
+}
+
+.form-register-l .login,
+.form-register-l .register {
+    margin-top: 0;
+}
+
+.register{
+    display: none;
 }
 
 
