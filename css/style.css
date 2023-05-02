@@ -822,9 +822,12 @@ border-radius: 0 0 10px 10px; */
 .form-register-l .botons{
     margin-bottom: 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0 1.5rem;
+    margin: 0 auto;
     gap: .5rem;
+    width: 80rem;
+    max-width: 100%;
 }
 
 .form-register-l .botons .btn{
