@@ -711,7 +711,7 @@ span{
 .formulario__body .campo:nth-child(6),
 .formulario__body.login .campo.submit{
     justify-content: end;
-    margin-top: .5rem;
+    margin-top: .8rem;
 }
 
 
