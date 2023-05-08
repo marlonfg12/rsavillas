@@ -28,6 +28,7 @@ body{
     font-size: 1.6rem;
     line-height: 2;
     background-color: var(--blanco);
+    overflow-x: hidden;
 }
 
 /** Utilidades **/
@@ -960,10 +961,36 @@ border-radius: 0 0 10px 10px; */
 
 @media(min-width: 1024px){
     .contents-cards{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 .contents-cards .card{
-    
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.contents-cards .card a{
+    display: flex;
+    flex-direction: column;
+}
+
+.contents-cards .card a .card__informacion{
+    color: var(--negro);
+    font-size: 2rem;
+}
+
+.card a .card__informacion .card__nombre,
+.card a .card__informacion .card__precio{
+    margin: 0;
+    text-align: start;
+}
+
+.card a .card__informacion .card__precio{
+    color: var(--primary-hover);
+}
+
+.contents-cards .card a{
+    text-align: center;
 }
