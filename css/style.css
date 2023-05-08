@@ -943,5 +943,27 @@ border-radius: 0 0 10px 10px; */
     color: #fff;
   }
 
+/** Ecoproductos - cards **/
+.contents-cards{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
 
 
+@media(min-width: 768px){
+    .contents-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1024px){
+    .contents-cards{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.contents-cards .card{
+    
+}
