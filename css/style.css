@@ -1031,11 +1031,19 @@ border-radius: 0 0 10px 10px; */
     display: none;
 }
 
+.contents-cards .card.open .btn-shop .btn {
+    display: block;
+}
+
 .contents-cards .card.open .btn-shop {
-    display: flex;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    justify-content: center;
-    font-size: 2.2rem;
+    gap: 2rem;
+}
+
+.contents-cards .card.open .btn-shop .btn:nth-child(1) {
+    grid-column: 1 / 2;
 }
 
 .contents-cards .card.open {
@@ -1090,11 +1098,6 @@ border-radius: 0 0 10px 10px; */
 
     .contents-cards .card.open .content-card img {
         grid-row: 1 / 3;
-    }
-
-    .contents-cards .card.open .content-card .btn {
-        grid-column: 2 / 3;
-        height: 60%;
     }
 
     .contents-cards .card.open .close {

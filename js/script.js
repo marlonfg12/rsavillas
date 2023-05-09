@@ -53,7 +53,7 @@ menuIcon.addEventListener('click', toggleMenu);
 
 const card = document.querySelectorAll('.card');
 const open = document.querySelectorAll('.btn');
-const btnShop = document.querySelectorAll('.btn-shop');
+const btnShop = document.querySelectorAll('.btn-info');
 
 function activeCard() {
   card.forEach((item) => item.classList.remove('open'));
@@ -66,17 +66,18 @@ function activeCard() {
   });
 }
 
-// function shareCardInfo() {
-//   const cardNombre = this.closest('.card').querySelector('.card__nombre').textContent;
+ function shareCardInfo() {
+   const cardNombre = this.closest('.card').querySelector('.card__nombre').textContent;
+   const cardPrice = this.closest('.card').querySelector('.card__precio').textContent;
   
-//   const whatsappText = `Hola, estoy interesado en: ${cardNombre}`;
-//   const whatsappLink = `https://api.whatsapp.com/send/?phone=3508382046&text=${encodeURIComponent(whatsappText)}&type=phone_number&app_absent=0`;
+   const whatsappText = `Hola, me puedes dar mas información sobre: ${cardNombre} - ${cardPrice}`;
+   const whatsappLink = `https://api.whatsapp.com/send/?phone=3508382046&text=${encodeURIComponent(whatsappText)}&type=phone_number&app_absent=0`;
   
-//   window.open(whatsappLink, '_blank');
-// }
+   window.open(whatsappLink, '_blank');
+ }
 
 card.forEach((item)=> 
 item.addEventListener('click', activeCard));
 
-// btnShop.forEach((item) => 
-// item.addEventListener('click', shareCardInfo));
+btnShop.forEach((item) => 
+item.addEventListener('click', shareCardInfo));
