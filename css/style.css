@@ -1112,3 +1112,33 @@ border-radius: 0 0 10px 10px; */
         right: 15%;
     }
 }
+
+.icon-car {
+    background: var(--primary-hover);
+    padding: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+@media(min-width: 1440px){
+    .icon-car{
+        bottom: 10%;
+        right: 13%;
+    }
+}
+
+
+/* Form cuentanos que quieres */
+
+@media(min-width: 768px){
+    .formulario.eco .campos .campo:nth-child(3){
+        grid-column: 1 / 3;
+    }
+}

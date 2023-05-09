@@ -1,12 +1,12 @@
 function mostrarLogin() {
-    document.getElementById("login").style.display = "block";
-    document.getElementById("registrar").style.display = "none";
+  document.getElementById("login").style.display = "block";
+  document.getElementById("registrar").style.display = "none";
 
-    // Agrega la clase "active" al botón de login
-    document.querySelector(".btn-login").classList.add("active");
+  // Agrega la clase "active" al botón de login
+  document.querySelector(".btn-login").classList.add("active");
 
-    // Elimina la clase "active" del botón de registro (si la tiene)
-    document.querySelector(".btn-registrar").classList.remove("active");
+  // Elimina la clase "active" del botón de registro (si la tiene)
+  document.querySelector(".btn-registrar").classList.remove("active");
 
 }
 
@@ -18,14 +18,14 @@ function mostrarLogin() {
 
 
 function mostrarRegistrar() {
-    document.getElementById("registrar").style.display = "block";
-    document.getElementById("login").style.display = "none";
+  document.getElementById("registrar").style.display = "block";
+  document.getElementById("login").style.display = "none";
 
-    // Agrega la clase "active" al botón de registro
-    document.querySelector(".btn-registrar").classList.add("active");
+  // Agrega la clase "active" al botón de registro
+  document.querySelector(".btn-registrar").classList.add("active");
 
-    // Elimina la clase "active" del botón de login (si la tiene)
-    document.querySelector(".btn-login").classList.remove("active");
+  // Elimina la clase "active" del botón de login (si la tiene)
+  document.querySelector(".btn-login").classList.remove("active");
 
 }
 
@@ -54,6 +54,8 @@ menuIcon.addEventListener('click', toggleMenu);
 const card = document.querySelectorAll('.card');
 const open = document.querySelectorAll('.btn');
 const btnShop = document.querySelectorAll('.btn-info');
+const formEco = document.querySelector('.formulario.eco');
+const btnFormEco = document.querySelector('.btn-formulaio-eco');
 
 function activeCard() {
   card.forEach((item) => item.classList.remove('open'));
@@ -66,18 +68,34 @@ function activeCard() {
   });
 }
 
- function shareCardInfo() {
-   const cardNombre = this.closest('.card').querySelector('.card__nombre').textContent;
-   const cardPrice = this.closest('.card').querySelector('.card__precio').textContent;
-  
-   const whatsappText = `Hola, me puedes dar mas información sobre: ${cardNombre} - ${cardPrice}`;
-   const whatsappLink = `https://api.whatsapp.com/send/?phone=3508382046&text=${encodeURIComponent(whatsappText)}&type=phone_number&app_absent=0`;
-  
-   window.open(whatsappLink, '_blank');
- }
 
-card.forEach((item)=> 
-item.addEventListener('click', activeCard));
 
-btnShop.forEach((item) => 
-item.addEventListener('click', shareCardInfo));
+function shareCardInfo() {
+  const cardNombre = this.closest('.card').querySelector('.card__nombre').textContent;
+  const cardPrice = this.closest('.card').querySelector('.card__precio').textContent;
+
+  const whatsappText = `Hola, me puedes dar mas información sobre: ${cardNombre}-${cardPrice}`;
+  const whatsappLink = `https://api.whatsapp.com/send/?phone=3508382046&text=${encodeURIComponent(whatsappText)}&type=phone_number&app_absent=0`;
+
+  window.open(whatsappLink, '_blank');
+}
+
+
+
+function shareFormInfo() {
+  const nombre = formEco.querySelector('.Nombre').value;
+  const producto = formEco.querySelector('.Producto').value;
+  const desc = formEco.querySelector('.desc-textarea').value;
+  const whatsappText = `Hola me llamo ${nombre}, estoy interesado en ${producto}, Descripción: ${desc}`;
+  const whatsappLink = `https://api.whatsapp.com/send/?phone=3508382046&text=${encodeURIComponent(whatsappText)}&type=phone_number&app_absent=0`;
+
+  window.open(whatsappLink, '_blank');
+}
+
+btnFormEco.addEventListener('click', shareFormInfo);
+
+card.forEach((item) =>
+  item.addEventListener('click', activeCard));
+
+btnShop.forEach((item) =>
+  item.addEventListener('click', shareCardInfo));
