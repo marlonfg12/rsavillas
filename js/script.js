@@ -99,3 +99,14 @@ card.forEach((item) =>
 
 btnShop.forEach((item) =>
   item.addEventListener('click', shareCardInfo));
+
+
+// Carrito de compras
+
+const btnCart = document.querySelector('.icon-car');
+const CartProduct = document.querySelector('.carrito');
+
+btnCart.onclick = function(){
+  btnCart.classList.toggle('active');
+  CartProduct.classList.toggle('active');
+}
