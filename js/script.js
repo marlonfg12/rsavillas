@@ -46,3 +46,26 @@ function toggleMenu() {
 }
 
 menuIcon.addEventListener('click', toggleMenu);
+
+
+
+//------------------ Overlay -----------------
+
+const card = document.querySelectorAll('.card');
+const open = document.querySelectorAll('.btn');
+
+function activeCard() {
+  card.forEach((item) => item.classList.remove('open'));
+  this.classList.add('open');
+
+  const closeBtn = this.querySelector('.close');
+  closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Evita que el evento se propague a otros elementos
+    this.classList.remove('open');
+  });
+}
+
+card.forEach((item)=> 
+item.addEventListener('click', activeCard));
+
+

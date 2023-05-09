@@ -950,6 +950,7 @@ border-radius: 0 0 10px 10px; */
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    padding: 4rem 0;
 }
 
 
@@ -971,26 +972,109 @@ border-radius: 0 0 10px 10px; */
     border-radius: 10px;
 }
 
-.contents-cards .card a{
-    display: flex;
-    flex-direction: column;
+.contents-cards .card .content-card{
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 1rem;
 }
 
-.contents-cards .card a .card__informacion{
-    color: var(--negro);
+.contents-cards .card .content-card img{    
+    width: 100%;
+}
+
+.contents-cards .card .content-card .card__informacion{
     font-size: 2rem;
+    color: var(--negro);
 }
 
-.card a .card__informacion .card__nombre,
-.card a .card__informacion .card__precio{
+.card .content-card .card__informacion p{
     margin: 0;
-    text-align: start;
 }
 
-.card a .card__informacion .card__precio{
+.card .content-card .card__informacion .card__precio{
     color: var(--primary-hover);
+    font-weight: bold;
 }
 
-.contents-cards .card a{
+.contents-cards .card .content-card .btn{
+    margin-top: 1rem;
     text-align: center;
 }
+
+
+/** Overlay card **/
+.contents-cards .card .btn-shop{
+    display: none;
+}
+
+.contents-cards .card.open .btn{
+    display: none;
+}
+
+.contents-cards .card.open .btn-shop{
+    display: block;
+}
+
+.contents-cards .card.open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    border-radius: 0;
+}
+
+.contents-cards .card.open .content-card{
+    background-color: var(--blanco);
+    padding: 2rem;
+    width: 100rem;
+}
+
+
+.contents-cards .card .close{
+    display: none;
+}
+
+.contents-cards .card.open .close{
+    display: block;
+    position: fixed;
+    font-size: 2.2rem;
+    top: 10%;
+    z-index: 100000;
+}
+
+.content-card .card__informacion .d-n{
+    display: none;
+}
+
+.card.open .content-card .card__informacion .d-n{
+    display: inline;
+}
+
+
+@media(min-width: 768px){
+    .contents-cards .card.open .content-card{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .contents-cards .card.open .content-card img{
+        grid-row: 1 / 3;
+    }
+
+    .contents-cards .card.open .content-card .btn{
+        grid-column: 2  /  3;
+        height: 60%;
+    }
+
+    .contents-cards .card.open .close{
+        top: 32%;
+        right: 15%;
+    }
+}
+
