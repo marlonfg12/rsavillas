@@ -963,11 +963,10 @@ border-radius: 0 0 10px 10px; */
 
 /** Ecoproductos - cards **/
 .contents-cards {
-    margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 4rem 0;
+    padding: 0 0 4rem 0;
 }
 
 
