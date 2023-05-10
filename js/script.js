@@ -110,3 +110,13 @@ btnCart.onclick = function(){
   btnCart.classList.toggle('active');
   CartProduct.classList.toggle('active');
 }
+
+
+/** Dropdown **/
+
+let toggle = document.querySelector('.navegacion__enlace--desp');
+let menu_sobre = document.querySelector('#sobre');
+
+toggle.onclick = function(){
+    menu_sobre.classList.toggle('active');
+}

@@ -1035,7 +1035,7 @@ border-radius: 0 0 10px 10px; */
 }
 
 .contents-cards .card.open .btn-shop {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
@@ -1129,22 +1129,24 @@ border-radius: 0 0 10px 10px; */
     transition: .5s;
 }
 
-.icon-car .fa-xmark{
+.icon-car .fa-xmark {
     display: none;
 }
-.icon-car.active{
+
+.icon-car.active {
     background-color: var(--secundary);
 }
-.icon-car.active .fa-xmark{
+
+.icon-car.active .fa-xmark {
     display: block;
 }
 
-.icon-car.active .fa-cart-arrow-down{
+.icon-car.active .fa-cart-arrow-down {
     display: none;
 }
 
-@media(min-width: 1440px){
-    .icon-car{
+@media(min-width: 1440px) {
+    .icon-car {
         bottom: 10%;
         right: 13%;
     }
@@ -1152,12 +1154,12 @@ border-radius: 0 0 10px 10px; */
 
 /* Cart div */
 
-.carrito{
+.carrito {
     display: none;
-    transition:.5s;
+    transition: .5s;
 }
 
-.carrito.active{
+.carrito.active {
     display: block;
     overflow-x: hidden;
     overflow-y: auto;
@@ -1168,8 +1170,8 @@ border-radius: 0 0 10px 10px; */
 }
 
 
-@media(min-width: 768px){
-    .carrito.active{
+@media(min-width: 768px) {
+    .carrito.active {
         align-items: center;
         width: 40rem;
         box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
@@ -1181,15 +1183,15 @@ border-radius: 0 0 10px 10px; */
 }
 
 
-@media(min-width: 1440px){
-    .carrito.active{
+@media(min-width: 1440px) {
+    .carrito.active {
         bottom: 12%;
         right: 15%;
     }
 }
 
 
-.carrito .cartProduct{
+.carrito .cartProduct {
     margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr 3fr .5fr;
@@ -1201,24 +1203,128 @@ border-radius: 0 0 10px 10px; */
     overflow: hidden;
 }
 
-.carrito .cartProduct:last-of-type{
+.carrito .cartProduct:last-of-type {
     margin-bottom: 0;
 }
 
 .cartProduct .cartProduct__Info .cartProduct__nombre,
-.cartProduct .cartProduct__Info .cartProduct__precio{
+.cartProduct .cartProduct__Info .cartProduct__precio {
     margin: 0;
 }
 
-.cartProduct .cartProduct__icon{
+.cartProduct .cartProduct__icon {
     color: var(--rojo);
     cursor: pointer;
 }
 
 /* Form cuentanos que quieres */
 
-@media(min-width: 768px){
-    .formulario.eco .campos .campo:nth-child(3){
+@media(min-width: 768px) {
+    .formulario.eco .campos .campo:nth-child(3) {
         grid-column: 1 / 3;
     }
+}
+
+
+
+/* Menu */
+
+#sobre {
+    position: relative;
+    padding: 0;
+    background: var(--blanco);
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+
+#sobre::before {
+    background: var(--blanco);
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+@media(min-width: 768px){
+    #sobre {
+        position: absolute;
+        top: 8.5rem;
+        right: 40rem;
+        width: 200px;
+        min-height: 100px;
+        background: var(--blanco);  
+        transition: .5s ease;
+        z-index: 100;
+    }
+    #sobre::before {
+        background: var(--blanco);
+        right: 35px;
+        left: auto;
+    }
+}
+
+@media(min-width: 1440px) {
+    #sobre {
+        position: absolute;
+        top: 8.5rem;
+        right: 75rem;
+        width: 200px;
+        min-height: 100px;
+        background: var(--blanco);
+        transition: .5s ease;
+        z-index: 100;
+    }
+
+    #sobre::before {
+        background: var(--blanco);
+        right: 35px;
+        left: auto;
+    }
+}
+
+
+
+#sobre.active {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+}
+
+#sobre ul {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+    background: var(--blanco);
+}
+
+
+#sobre ul li {
+    list-style: none;
+    padding: 1rem;
+    transition: .5s;
+}
+
+#sobre li:hover {
+    background: #f5f5f5;
+    transition: 0s;
+}
+
+#sobre li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#sobre li a i {
+    font-size: 1.25em;
+    color: #999;
 }
