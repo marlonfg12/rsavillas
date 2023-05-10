@@ -280,9 +280,16 @@ span {
 
 /** HERO **/
 
+.webp .hero{
+    background-image: url(../img/webp/Banner2.webp);
+}
+
+.no-webp .hero{
+    background-image: url(../img/Banner2.jpg);
+}
+
 
 .hero {
-    background-image: url(../img/Banner2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
