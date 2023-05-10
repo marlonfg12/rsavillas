@@ -1088,6 +1088,9 @@ border-radius: 0 0 10px 10px; */
     display: inline;
 }
 
+.contents-cards .card.open .content-card img {
+    height: 25rem;
+}
 
 @media(min-width: 768px) {
     .contents-cards .card.open .content-card {
