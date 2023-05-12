@@ -162,7 +162,9 @@ span {
     font-size: 2.8rem;
 }
 
-.navegacion__logo a img {
+.navegacion__logo a img,
+.navegacion__logo a picture,
+.navegacion__logo a source {
     max-height: 100%;
     height: 15rem;
 }
