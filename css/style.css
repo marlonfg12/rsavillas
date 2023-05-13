@@ -285,11 +285,11 @@ span {
 
 /** HERO **/
 
-.webp .hero{
+.webp .hero {
     background-image: url(../img/webp/Banner2.webp);
 }
 
-.no-webp .hero{
+.no-webp .hero {
     background-image: url(../img/Banner2.jpg);
 }
 
@@ -532,7 +532,8 @@ span {
 .footer__logo {
     text-align: center;
 }
-.footer__logo img{
+
+.footer__logo img {
     height: 20rem;
     background-color: var(--blanco);
     padding: 1rem;
@@ -761,7 +762,7 @@ span {
 }
 
 .formulario .formulario__body .campo .campo__label {
-    flex: 0 0 10rem;
+    flex: 0 0 11rem;
 }
 
 .formulario .formulario__body .campo .campo__field {
@@ -771,6 +772,7 @@ span {
     border: 1px solid var(--secundary);
     border-radius: .5rem;
     transition: border .5s ease;
+    width: 100% !important;
 }
 
 .formulario__body .campo .campo__field:focus {
@@ -789,6 +791,11 @@ span {
     margin-top: .8rem;
 }
 
+.formulario__body.login .campo:nth-child(5),
+.formulario__body.login .campo:nth-child(6) {
+    margin-top: 0;
+}
+
 
 @media(min-width: 768px) {
     .formulario .formulario__body {
@@ -803,11 +810,6 @@ span {
 
     .formulario__body .campo:nth-child(6) {
         grid-column: 2 / 3;
-    }
-
-    .formulario__body.login .campo:nth-child(5),
-    .formulario__body.login .campo:nth-child(6) {
-        margin-top: 0;
     }
 
     .formulario__body.login .campo:nth-child(5) {
@@ -894,6 +896,11 @@ border-radius: 0 0 10px 10px; */
     flex-direction: column;
     width: 100%;
     max-width: 180rem;
+    padding: 0;
+}
+
+.info-hero.no-bg form {
+    font-size: 1.6rem;
 }
 
 .form-register-l .botons {
@@ -1109,12 +1116,12 @@ border-radius: 0 0 10px 10px; */
         align-items: center;
     }
 
-    .contents-cards .card.open .content-card img {
+    .contents-cards .card.open .content-card picture {
         grid-row: 1 / 3;
     }
 
     .contents-cards .card.open .close {
-        top: 20%;
+        top: 10%;
     }
 }
 
@@ -1265,17 +1272,18 @@ border-radius: 0 0 10px 10px; */
     transform: rotate(45deg);
 }
 
-@media(min-width: 768px){
+@media(min-width: 768px) {
     #sobre {
         position: absolute;
         top: 8.5rem;
         right: 40rem;
         width: 200px;
         min-height: 100px;
-        background: var(--blanco);  
+        background: var(--blanco);
         transition: .5s ease;
         z-index: 100;
     }
+
     #sobre::before {
         background: var(--blanco);
         right: 35px;
@@ -1346,7 +1354,7 @@ border-radius: 0 0 10px 10px; */
 
 /* pread */
 
-.PREAD{
+.PREAD {
     text-align: center;
     align-items: center;
 }
