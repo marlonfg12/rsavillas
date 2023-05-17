@@ -47,6 +47,10 @@ body {
     margin-right: 0 !important;
 }
 
+.bg-white{
+    background-color:#E2e2e2;
+    padding: 2rem;
+}
 
 .text-left {
     text-align: left;
